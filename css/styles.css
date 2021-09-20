@@ -126,9 +126,10 @@ a:link{
   display: flex;
   justify-content: space-between;
   padding: 5px;
+  width: 98%;
 }
 
-img{
+a img{
   width: 98%;
   margin: 1%;
 }
@@ -141,8 +142,81 @@ body{
   margin: 0px;
 }
 
+.team-info{
+  width: 98%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.section{
+  width: 100%;
+  position: relative;
+}
+
+.team-info a{
+  width: 50%;
+}
+
+.section img{
+  width: 100%; /* width of container */
+  height: 400px;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+#safeco{object-position: 39%;}
+
+.overlay {
+  position: absolute;
+  bottom: 40%;
+  left: 17.5%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.75); /* Black see-through */
+  color: #f1f1f1;
+  width: 50%;
+  transition: .5s ease;
+  opacity:1;
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+
+
 @media (min-width: 48em) {
   .header li a{
     font-size: 1.5em;
+  }
+
+  .team-info a{width: 25%;}
+
+  .overlay{
+    opacity: 0;
+  }
+
+  .section:hover .overlay {
+    opacity: 1;
+  }
+
+  .section img{
+      height: 700px;
+  }
+
+  .section:hover img{
+    opacity: .6;
+  }
+
+  .pg-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .pg-links a{
+    object-fit: cover;
+    width: 45%;
   }
 }
